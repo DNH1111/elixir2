@@ -18,11 +18,11 @@ function setPassword() {
     const $password = document.getElementById('password-set');
     const password = $password.value;
     if (password == null || password == '') {
-        alert('Removed password');
+        alert('パスワードをリセットしました');
         localStorage.removeItem('password');
         return;
     }
-    if (confirm("Are you sure you want to password protect this page? If you do, you will not be able to access this page without the password. If you do not want to password protect this page, click cancel.") == true) {
+    if (confirm("パスワードを変更してもいいですか？") == true) {
         localStorage.setItem('password', password);
     }
 }
